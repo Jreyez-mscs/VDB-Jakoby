@@ -1,0 +1,26 @@
+Table	Columns	Filter	Sort	Query
+
+Apartment, Building	(all)		BuildingName	
+"SELECT        Apartment.*, Building.*, Building.Building_Name AS Expr1
+FROM            Apartment INNER JOIN
+                Building ON Apartment.Building_ID = Building.Building_ID
+                ORDER BY Expr1"
+Person, Address	(all)		LastName	
+"SELECT        Person.*, Address.*, Person.Last_Name AS Expr1
+FROM           Person INNER JOIN
+               Address ON Person.Address_ID = Address.Address_ID
+               ORDER BY Expr1"
+Building, Address	BuildingName, Address.*		City	
+"SELECT        Building.Building_Name, Address.*, Address.City AS Expr1
+FROM           Building INNER JOIN
+               Address ON Building.Address_ID = Address.Address_ID
+               ORDER BY Expr1"
+Receipt, Invoice	(all)			
+"SELECT        Receipt.*, Invoice.*
+FROM           Receipt INNER JOIN
+               Invoice ON Receipt.Invoice_ID = Invoice.InvoiceID"
+LineItem, Product	qty, name, price	InvoiceID=1		
+"SELECT        LineItem.Qty, Product.Name, Product.Price
+FROM           LineItem INNER JOIN
+               Product ON LineItem.Product_ID = Product.Product_ID
+WHERE          (LineItem.Invoice_ID = 1)"

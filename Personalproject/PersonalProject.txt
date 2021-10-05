@@ -1,0 +1,17 @@
+Personal Database Project
+
+As a person who loves video games but has too many and hasn’t beaten them all, I want to make a database that can help me visually see which game I haven’t beat.
+
+I want to see how much time I’ve put into the game
+
+I want to see how long on average the game takes to beat
+
+I want to find out what the difference is between my current time and how long it is
+
+I want to organize it to see which games I’m the closest to beating, to better choose what to prioritize
+
+
+Backlog(game_Id, Achievement_Id, Order_to_play)
+Game(Game_Id,Name, Hours_played, Total_hours,Completion%)
+Achievement(Achievement_Id, Earned, Achievement_Total)
+
